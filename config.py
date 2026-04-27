@@ -1,7 +1,10 @@
 import configparser
 import os
 
-def get_config(filename='config.ini'):
+def get_config():
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    filename = os.path.join(BASE_DIR, filename)
+
     parser = configparser.ConfigParser()
     parser.optionxform = str  # Сохраняем регистр ключей
     parser.read(filename, encoding='utf-8')
