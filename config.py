@@ -3,7 +3,7 @@ import os
 
 def get_config():
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-    filename = os.path.join(BASE_DIR, filename)
+    filename = os.path.join(BASE_DIR, 'config.ini')
 
     parser = configparser.ConfigParser()
     parser.optionxform = str  # Сохраняем регистр ключей
